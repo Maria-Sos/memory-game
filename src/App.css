@@ -1,38 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.main-btn {
+  animation: grow-and-shrink 4000ms;
+  animation-iteration-count: 3;
+  background-color: #4C6793;
+  color: #EEEEEE;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  box-shadow: 10px 10px 30px #06283D;
+  font-family: 'Quicksand', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background-color: #DFF6FF;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(3, 2fr);
+  border: none;
+  box-shadow: 20px 20px 50px #001E6C;
+  width: 600px;
+  height: 500px;
+  margin: 20px auto;
+  background-color: #DFF6FF
+}
+
+.cards {
+  border: solid 1px #06283D;
+  font-size: 50px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 50px;
+  background-color: #DFF6FF;
+  box-shadow: 20px 20px 50px #06283D;
+}
+
+svg {
+  font-family: 'Russo One', sans-serif;
+  width: 50%; height: 50%;
+}
+svg text {
+  text-transform: uppercase;
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  /*stroke: #624F82;*/
+  font-size: 150px;
+  color: #001E6C;
+  text-shadow: 10px 10px 30px #1363DF;
+
+}
+@keyframes stroke {
+  0%   {
+    fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+    stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+  }
+  70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+  80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+  100% {
+    fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+    stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+  padding: 20px;
+  font-family: 'Russo One', sans-serif;
+  color: #001E6C;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  padding: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #77ACF1;
 }
