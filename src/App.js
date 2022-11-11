@@ -61,6 +61,7 @@ function App() {
 	  }, 500)
 	}
 	counterScore()
+	// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [history])
 
 
