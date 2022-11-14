@@ -39,7 +39,6 @@ function App() {
   console.log(history)
 
   const checkPairs = () => {
-	console.log('check')
 	if (history[history.length - 1] !== history[history.length - 2]) {
 	  const newField = field.map(el =>
 		el.name === history[history.length - 1] || el.name === history[history.length - 2]
